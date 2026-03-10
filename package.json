@@ -14,17 +14,3 @@
 "@hapi/boom": "^10.0.1"
 }
 }
-sock.ev.on("connection.update", (update) => {
-
-const { connection, qr } = update
-
-if (qr) {
-console.log("ESCANEA ESTE QR:")
-qrcode.generate(qr, { small: true })
-}
-
-if (connection === "open") {
-console.log("BOT CONECTADO")
-}
-
-})
